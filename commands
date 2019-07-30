@@ -1,0 +1,11 @@
+# How to allow a specifc user to excuite a specific commads in linux 
+
+linux commaands given below:--
+
+cat > /etc/sudoers.d/techops << SUDO
+techops ALL= NOPASSWD: /bin/systemctl restart publicapi.service
+techops ALL= NOPASSWD: /bin/systemctl stop publicapi.service
+techops ALL= NOPASSWD: /bin/systemctl start publicapi.service
+SUDO
+
+-----------------------------------------------------------------------------------------------------------------------------
